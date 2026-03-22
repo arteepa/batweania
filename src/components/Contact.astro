@@ -1,0 +1,112 @@
+---
+import MaterialIcon from "./MaterialIcon.astro";
+
+interface Props {
+  title: string;
+  intro: string;
+  locationLabel: string;
+  locationText: string;
+  emailLabel: string;
+  emailAddress: string;
+  formLabels: {
+    name: string;
+    email: string;
+    message: string;
+    submit: string;
+  };
+}
+
+const {
+  title,
+  intro,
+  locationLabel,
+  locationText,
+  emailLabel,
+  emailAddress,
+  formLabels,
+} = Astro.props;
+---
+
+<section
+  class="py-32 bg-surface-container-high relative overflow-hidden"
+  id="contacto"
+>
+  <div
+    class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+  >
+    <div class="space-y-8">
+      <h2
+        class="text-5xl font-headline font-bold text-primary tracking-tight"
+      >
+        {title}
+      </h2>
+      <p class="text-on-surface-variant text-lg leading-relaxed">{intro}</p>
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <MaterialIcon name="location_on" class="text-tertiary" />
+          <div>
+            <p class="font-bold text-primary">{locationLabel}</p>
+            <p class="text-on-surface-variant">{locationText}</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <MaterialIcon name="mail" class="text-tertiary" />
+          <div>
+            <p class="font-bold text-primary">{emailLabel}</p>
+            <p class="text-on-surface-variant">{emailAddress}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-surface p-10 rounded-[2.5rem] shadow-2xl relative">
+      <div
+        class="absolute -top-6 -right-6 w-24 h-24 bg-tertiary-fixed rounded-full flex items-center justify-center -rotate-12 border-4 border-surface shadow-lg"
+      >
+        <MaterialIcon name="send" class="text-tertiary text-4xl" />
+      </div>
+      <form class="space-y-6">
+        <div class="space-y-1">
+          <label
+            class="font-label text-xs uppercase tracking-widest text-primary font-bold ml-2"
+          >
+            {formLabels.name}
+          </label>
+          <input
+            class="w-full bg-surface-container-low border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-tertiary transition-all"
+            placeholder="Tu nombre..."
+            type="text"
+          />
+        </div>
+        <div class="space-y-1">
+          <label
+            class="font-label text-xs uppercase tracking-widest text-primary font-bold ml-2"
+          >
+            {formLabels.email}
+          </label>
+          <input
+            class="w-full bg-surface-container-low border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-tertiary transition-all"
+            placeholder="tu@email.com"
+            type="email"
+          />
+        </div>
+        <div class="space-y-1">
+          <label
+            class="font-label text-xs uppercase tracking-widest text-primary font-bold ml-2"
+          >
+            {formLabels.message}
+          </label>
+          <textarea
+            class="w-full bg-surface-container-low border-none rounded-[2rem] px-6 py-4 focus:ring-2 focus:ring-tertiary transition-all"
+            placeholder="¿En qué podemos ayudarte?"
+            rows="4"></textarea>
+        </div>
+        <button
+          class="w-full py-5 bg-primary text-on-primary rounded-full font-label font-bold text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-xl"
+          type="submit"
+        >
+          {formLabels.submit}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

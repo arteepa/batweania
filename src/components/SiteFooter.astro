@@ -1,0 +1,66 @@
+---
+import MaterialIcon from "./MaterialIcon.astro";
+
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
+interface SocialLink {
+  icon: string;
+  href: string;
+}
+
+interface Props {
+  siteName: string;
+  logoIcon: string;
+  footerLinks: FooterLink[];
+  socialLinks: SocialLink[];
+  copyrightLine: string;
+}
+
+const { siteName, logoIcon, footerLinks, socialLinks, copyrightLine } =
+  Astro.props;
+---
+
+<footer
+  class="w-full bg-[#f2e8d0] dark:bg-[#1a160f] mt-20 pb-12 pt-20 border-t border-[#c9c7b8]/15"
+>
+  <div
+    class="flex flex-col items-center gap-8 px-6 text-center max-w-7xl mx-auto"
+  >
+    <div class="flex items-center gap-3">
+      <MaterialIcon name={logoIcon} class="text-secondary text-4xl" />
+      <span class="font-headline text-2xl italic text-[#616133]">
+        {siteName}
+      </span>
+    </div>
+    <nav class="flex flex-wrap justify-center gap-10">
+      {
+        footerLinks.map((link) => (
+          <a
+            class="font-label text-sm tracking-wide uppercase text-[#594f3f]/70 hover:text-[#684c0b] transition-all underline-offset-8 hover:underline"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="flex gap-6 mt-4">
+      {
+        socialLinks.map((link) => (
+          <a
+            class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-tertiary hover:text-white transition-colors"
+            href={link.href}
+          >
+            <MaterialIcon name={link.icon} />
+          </a>
+        ))
+      }
+    </div>
+    <p class="font-label text-sm tracking-wide uppercase text-[#594f3f] mt-10">
+      {copyrightLine}
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,33 @@
+---
+import MaterialIcon from "./MaterialIcon.astro";
+
+interface Props {
+  icon: string;
+  headline: string;
+  quote: string;
+  body: string;
+}
+
+const { icon, headline, quote, body } = Astro.props;
+---
+
+<section class="py-32 relative bg-surface-container-highest/30" id="mision">
+  <div class="max-w-5xl mx-auto px-8 text-center space-y-12">
+    <MaterialIcon name={icon} class="text-tertiary text-5xl" />
+    <h2
+      class="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight"
+    >
+      {headline}
+    </h2>
+    <div class="grid md:grid-cols-2 gap-16 text-left items-start">
+      <p
+        class="text-lg leading-relaxed text-on-surface-variant font-light italic border-l-2 border-tertiary-fixed-dim pl-8"
+      >
+        &ldquo;{quote}&rdquo;
+      </p>
+      <p class="text-lg leading-relaxed text-on-surface">
+        {body}
+      </p>
+    </div>
+  </div>
+</section>

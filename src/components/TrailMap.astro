@@ -1,0 +1,129 @@
+---
+import MaterialIcon from "./MaterialIcon.astro";
+
+interface FeaturedRoute {
+  title: string;
+  meta: string;
+}
+
+interface ObservationTile {
+  _type: "observation";
+  title: string;
+  body: string;
+  icon: string;
+}
+
+interface StatTile {
+  _type: "stat";
+  value: string;
+  label: string;
+}
+
+interface IconCalloutTile {
+  _type: "iconCallout";
+  icon: string;
+  label: string;
+}
+
+type BentoTile = ObservationTile | StatTile | IconCalloutTile;
+
+interface Props {
+  title: string;
+  intro: string;
+  mapImageUrl: string;
+  mapImageAlt: string;
+  featuredRoute: FeaturedRoute;
+  bentoTiles: BentoTile[];
+}
+
+const { title, intro, mapImageUrl, mapImageAlt, featuredRoute, bentoTiles } =
+  Astro.props;
+---
+
+<section class="py-32 bg-surface" id="mapa">
+  <div class="max-w-7xl mx-auto px-8">
+    <div
+      class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+    >
+      <div class="max-w-xl">
+        <h2
+          class="text-5xl font-headline font-bold text-primary mb-4 tracking-tight"
+        >
+          {title}
+        </h2>
+        <p class="text-on-surface-variant text-lg">{intro}</p>
+      </div>
+      <div class="flex gap-4">
+        <button
+          class="p-4 bg-surface-container rounded-full text-tertiary hover:bg-tertiary-fixed transition-colors"
+        >
+          <MaterialIcon name="download" />
+        </button>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px] md:h-[600px]"
+    >
+      <div
+        class="md:col-span-2 md:row-span-2 bg-surface-variant rounded-full relative overflow-hidden group"
+      >
+        <img
+          alt={mapImageAlt}
+          class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+          src={mapImageUrl}
+        />
+        <div
+          class="absolute inset-0 bg-primary/20 flex flex-col justify-end p-10 text-white"
+        >
+          <h4 class="font-headline text-3xl font-bold">
+            {featuredRoute.title}
+          </h4>
+          <p class="font-label text-sm uppercase tracking-widest opacity-80">
+            {featuredRoute.meta}
+          </p>
+        </div>
+      </div>
+      {
+        bentoTiles.map((tile) => {
+          if (tile._type === "observation") {
+            return (
+              <div class="md:col-span-2 bg-tertiary-container rounded-full p-10 text-on-tertiary-container flex items-center justify-between">
+                <div class="space-y-2">
+                  <h4 class="text-2xl font-headline font-bold">{tile.title}</h4>
+                  <p class="opacity-80">{tile.body}</p>
+                </div>
+                <MaterialIcon
+                  name={tile.icon}
+                  class="text-6xl opacity-30"
+                />
+              </div>
+            );
+          }
+          if (tile._type === "stat") {
+            return (
+              <div class="md:col-span-1 bg-surface-container-high rounded-full p-8 flex flex-col justify-center items-center text-center">
+                <span class="text-4xl font-headline font-bold text-tertiary mb-1">
+                  {tile.value}
+                </span>
+                <p class="text-xs font-label uppercase tracking-widest text-primary">
+                  {tile.label}
+                </p>
+              </div>
+            );
+          }
+          if (tile._type === "iconCallout") {
+            return (
+              <div class="md:col-span-1 bg-secondary rounded-full p-8 flex flex-col justify-center items-center text-center text-white">
+                <MaterialIcon name={tile.icon} class="text-3xl mb-2" />
+                <p class="text-xs font-label uppercase tracking-widest">
+                  {tile.label}
+                </p>
+              </div>
+            );
+          }
+          return null;
+        })
+      }
+    </div>
+  </div>
+</section>
