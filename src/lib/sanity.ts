@@ -45,8 +45,6 @@ interface SanityImage {
 
 export interface HomePageDoc {
   hero: {
-    badgeIcon: string;
-    badgeText: string;
     titlePlain: string;
     titleItalic: string;
     subtitle: string;

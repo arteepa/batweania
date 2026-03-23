@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SiteHeader from "@/components/SiteHeader.astro";
 import Hero from "@/components/Hero.astro";
 import Mission from "@/components/Mission.astro";
 import Sanctuary from "@/components/Sanctuary.astro";
@@ -49,10 +48,8 @@ const defaultSettings: SiteSettingsDoc = {
 const s = settings ?? defaultSettings;
 
 const heroFallback = {
-  badgeIcon: "energy_savings_leaf",
-  badgeText: "Legado Yaqui",
-  titlePlain: "El Universo",
-  titleItalic: "del Río.",
+  titlePlain: "Parque Natural",
+  titleItalic: "Batwe Ania",
   subtitle: "Bienvenido a Batwe Ania. Un santuario donde la tierra cuenta historias ancestrales y el agua nutre el alma de nuestra comunidad.",
   primaryCta: { label: "Explorar Tierras", href: "#ayuda" },
   secondaryCta: { label: "Nuestra Misión", href: "#mision" },
@@ -63,8 +60,6 @@ const heroFallback = {
 
 const hero = page?.hero
   ? {
-      badgeIcon: page.hero.badgeIcon,
-      badgeText: page.hero.badgeText,
       titlePlain: page.hero.titlePlain,
       titleItalic: page.hero.titleItalic,
       subtitle: page.hero.subtitle,
@@ -195,11 +190,6 @@ const contact = page?.contact
 ---
 
 <BaseLayout>
-  <SiteHeader
-    siteName={s.siteName}
-    logoIcon={s.logoIcon}
-    navItems={s.navItems}
-  />
   <main>
     <Hero {...hero} />
     <Mission {...mission} />

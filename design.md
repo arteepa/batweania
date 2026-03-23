@@ -58,7 +58,7 @@ In this system, depth is achieved through **Tonal Layering**, not synthetic shad
 Every component must feel like a handcrafted tool.
 
 * **Buttons:**
-* **Primary:** Solid `primary` (#594f3f) with `on-primary` (#ffffff) text. Use `xl` (0.75rem) roundedness to feel like a smoothed river stone.
+* **Primary:** Solid `primary` (#594f3f) with `on-primary` (#ffffff) text. Keep corners square—no border radius.
 * **Secondary:** No background; a `ghost border` (15% opacity) and `secondary` (#616133) text.
 * **Chips:** Use `surface-container-highest` with `label-md` text. These should look like small bone or wooden tags.
 * **Cards:** Forbid divider lines. Separate content using `spacing-6` (2rem) and subtle shifts from `surface` to `surface-container`.
@@ -72,7 +72,7 @@ Every component must feel like a handcrafted tool.
 ### Do:
 * **Embrace Asymmetry:** Align text to the left but allow imagery to break the grid, overlapping text containers to create a "scrapbook" feel.
 * **Use White Space:** Use `spacing-16` (5.5rem) and `spacing-20` (7rem) to give the content "room to breathe," reflecting the vastness of the natural park.
-* **Organic Shapes:** Use the `xl` (0.75rem) corner radius for most containers to avoid "stiff" 90-degree angles.
+* **Square geometry:** Use square corners (`border-radius: 0`) on containers and controls so surfaces read as cut paper, tile, or carved stone—not pill-shaped UI chrome.
 
 ### Don’t:
 * **Don’t use pure black (#000):** Use `on-background` (#201b0d) for all "black" text to maintain the organic warmth.

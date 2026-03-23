@@ -13,8 +13,6 @@ interface FloatingCard {
 }
 
 interface Props {
-  badgeIcon: string;
-  badgeText: string;
   titlePlain: string;
   titleItalic: string;
   subtitle: string;
@@ -26,8 +24,6 @@ interface Props {
 }
 
 const {
-  badgeIcon,
-  badgeText,
   titlePlain,
   titleItalic,
   subtitle,
@@ -51,12 +47,6 @@ const {
     class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
   >
     <div class="lg:col-span-6 space-y-8">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-label font-bold uppercase tracking-widest"
-      >
-        <MaterialIcon name={badgeIcon} class="text-base" />
-        {badgeText}
-      </div>
       <h1
         class="text-6xl md:text-8xl font-headline font-bold text-white leading-[0.9] tracking-tighter"
       >

@@ -11,8 +11,6 @@ export const homePage = defineType({
       title: "Hero Section",
       type: "object",
       fields: [
-        defineField({ name: "badgeIcon", title: "Badge Icon", type: "string" }),
-        defineField({ name: "badgeText", title: "Badge Text", type: "string" }),
         defineField({ name: "titlePlain", title: "Title (plain part)", type: "string", validation: (r) => r.required() }),
         defineField({ name: "titleItalic", title: "Title (italic part)", type: "string", validation: (r) => r.required() }),
         defineField({ name: "subtitle", title: "Subtitle", type: "text", rows: 3 }),

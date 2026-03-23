@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prototype": "npx --yes browser-sync start --server . --files index.html --port 4322 --no-open --no-ui",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
