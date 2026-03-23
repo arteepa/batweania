@@ -5,3 +5,5 @@ dist
 studio/dist
 studio/node_modules
 studio/.env
+.DS_Store
+*.local
