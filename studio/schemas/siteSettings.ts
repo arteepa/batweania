@@ -77,8 +77,34 @@ export const siteSettings = defineType({
     }),
     defineField({
       name: "copyrightLine",
-      title: "Copyright Line",
+      title: "Copyright Line (legacy — use Footer credit when possible)",
       type: "string",
+    }),
+    defineField({
+      name: "footerCredit",
+      title: "Footer credit",
+      description: "Shown as: prefix + linked label (e.g. Website x + Tiempos Mejores).",
+      type: "object",
+      fields: [
+        defineField({
+          name: "prefix",
+          title: "Text before link",
+          type: "string",
+          initialValue: "Website x",
+        }),
+        defineField({
+          name: "linkLabel",
+          title: "Link label",
+          type: "string",
+          initialValue: "Tiempos Mejores",
+        }),
+        defineField({
+          name: "linkUrl",
+          title: "Link URL",
+          type: "url",
+          initialValue: "https://tiemposmejores.org",
+        }),
+      ],
     }),
   ],
   preview: {

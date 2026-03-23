@@ -34,7 +34,7 @@ export const homePage = defineType({
         }),
         defineField({
           name: "heroImage",
-          title: "Hero Image",
+          title: "Hero Image (legacy — not shown in current layout)",
           type: "image",
           options: { hotspot: true },
           fields: [
@@ -43,7 +43,7 @@ export const homePage = defineType({
         }),
         defineField({
           name: "floatingCard",
-          title: "Floating Card",
+          title: "Floating Card (legacy — not shown in current layout)",
           type: "object",
           fields: [
             defineField({ name: "icon", title: "Icon", type: "string" }),
@@ -54,13 +54,22 @@ export const homePage = defineType({
       ],
     }),
 
+    defineField({
+      name: "featuredImage",
+      title: "Featured image (full width below hero)",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        defineField({ name: "alt", title: "Alt Text", type: "string" }),
+      ],
+    }),
+
     // ── Mission ────────────────────────────────────────
     defineField({
       name: "mission",
       title: "Mission Section",
       type: "object",
       fields: [
-        defineField({ name: "icon", title: "Icon", type: "string" }),
         defineField({ name: "headline", title: "Headline", type: "string", validation: (r) => r.required() }),
         defineField({ name: "quote", title: "Quote", type: "text", rows: 4 }),
         defineField({ name: "body", title: "Body", type: "text", rows: 4 }),
@@ -243,17 +252,6 @@ export const homePage = defineType({
           fields: [
             defineField({ name: "label", title: "Label", type: "string" }),
             defineField({ name: "address", title: "Address", type: "string" }),
-          ],
-        }),
-        defineField({
-          name: "formLabels",
-          title: "Form Labels",
-          type: "object",
-          fields: [
-            defineField({ name: "name", title: "Name Label", type: "string" }),
-            defineField({ name: "email", title: "Email Label", type: "string" }),
-            defineField({ name: "message", title: "Message Label", type: "string" }),
-            defineField({ name: "submit", title: "Submit Label", type: "string" }),
           ],
         }),
       ],

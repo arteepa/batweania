@@ -1,19 +1,15 @@
 ---
-import MaterialIcon from "./MaterialIcon.astro";
-
 interface Props {
-  icon: string;
   headline: string;
   quote: string;
   body: string;
 }
 
-const { icon, headline, quote, body } = Astro.props;
+const { headline, quote, body } = Astro.props;
 ---
 
-<section class="py-32 relative bg-surface-container-highest/30" id="mision">
+<section class="py-16 relative bg-surface-container-highest/30" id="mision">
   <div class="max-w-5xl mx-auto px-8 text-center space-y-12">
-    <MaterialIcon name={icon} class="text-tertiary text-5xl" />
     <h2
       class="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight"
     >

@@ -32,29 +32,24 @@ interface CTA {
   href: string;
 }
 
-interface FloatingCard {
-  icon: string;
-  title: string;
-  body: string;
-}
-
 interface SanityImage {
   asset: { _ref: string };
   alt?: string;
 }
 
 export interface HomePageDoc {
+  featuredImage?: SanityImage;
   hero: {
     titlePlain: string;
     titleItalic: string;
     subtitle: string;
     primaryCta: CTA;
     secondaryCta: CTA;
-    heroImage: SanityImage;
-    floatingCard: FloatingCard;
+    /** Optional — not shown in current layout (prototype is text-only hero). */
+    heroImage?: SanityImage;
+    floatingCard?: { icon: string; title: string; body: string };
   };
   mission: {
-    icon: string;
     headline: string;
     quote: string;
     body: string;
@@ -96,7 +91,6 @@ export interface HomePageDoc {
     intro: string;
     location: { label: string; text: string };
     email: { label: string; address: string };
-    formLabels: { name: string; email: string; message: string; submit: string };
   };
 }
 
@@ -106,7 +100,13 @@ export interface SiteSettingsDoc {
   navItems: Array<{ label: string; href: string; style: "default" | "emphasis" }>;
   footerLinks: Array<{ label: string; href: string }>;
   socialLinks: Array<{ icon: string; href: string }>;
-  copyrightLine: string;
+  /** @deprecated Kept for legacy documents; footer uses footerCredit when set. */
+  copyrightLine?: string;
+  footerCredit?: {
+    prefix: string;
+    linkLabel: string;
+    linkUrl: string;
+  };
 }
 
 // ── Queries ────────────────────────────────────────────
