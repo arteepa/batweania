@@ -40,47 +40,31 @@ interface SanityImage {
 export interface HomePageDoc {
   featuredImage?: SanityImage;
   hero: {
-    titlePlain: string;
-    titleItalic: string;
     subtitle: string;
     primaryCta: CTA;
     secondaryCta: CTA;
-    /** Optional — not shown in current layout (prototype is text-only hero). */
-    heroImage?: SanityImage;
-    floatingCard?: { icon: string; title: string; body: string };
   };
   mission: {
     headline: string;
-    quote: string;
     body: string;
   };
   sanctuary: {
     title: string;
     intro: string;
-    rules: string[];
+    items: string[];
     images: SanityImage[];
   };
-  trail: {
-    title: string;
-    intro: string;
-    mapImage: SanityImage;
-    featuredRoute: { title: string; meta: string };
-    bentoTiles: Array<
-      | { _type: "observation"; title: string; body: string; icon: string }
-      | { _type: "stat"; value: string; label: string }
-      | { _type: "iconCallout"; icon: string; label: string }
-    >;
+  logros?: {
+    title?: string;
+    intro?: string;
+    items?: string[];
   };
   contribute: {
     title: string;
     intro: string;
-    cards: Array<{
-      icon: string;
-      title: string;
-      body: string;
-      ctaLabel: string;
-      ctaHref: string;
-    }>;
+    body: string;
+    ctaLabel: string;
+    ctaHref: string;
   };
   gallery: {
     title: string;
@@ -89,8 +73,8 @@ export interface HomePageDoc {
   contact: {
     title: string;
     intro: string;
-    location: { label: string; text: string };
-    email: { label: string; address: string };
+    instagramUrl?: string;
+    instagramHandle?: string;
   };
 }
 
@@ -100,8 +84,6 @@ export interface SiteSettingsDoc {
   navItems: Array<{ label: string; href: string; style: "default" | "emphasis" }>;
   footerLinks: Array<{ label: string; href: string }>;
   socialLinks: Array<{ icon: string; href: string }>;
-  /** @deprecated Kept for legacy documents; footer uses footerCredit when set. */
-  copyrightLine?: string;
   footerCredit?: {
     prefix: string;
     linkLabel: string;

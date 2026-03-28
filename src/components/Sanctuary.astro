@@ -9,41 +9,35 @@ interface SanctuaryImage {
 interface Props {
   title: string;
   intro: string;
-  rules: string[];
+  items: string[];
   images: SanctuaryImage[];
 }
 
-const { title, intro, rules, images } = Astro.props;
+const { title, intro, items, images } = Astro.props;
 
 const imageStyles = [
   "aspect-square rounded-full overflow-hidden border-8 border-surface-container-high shadow-inner",
   "aspect-square rounded-full overflow-hidden border-8 border-surface-container-high shadow-inner mt-12",
   "aspect-square rounded-full overflow-hidden border-8 border-surface-container-high shadow-inner hidden md:block",
 ];
-
-const imgClasses = [
-  "w-full h-full object-cover grayscale opacity-80",
-  "w-full h-full object-cover",
-  "w-full h-full object-cover grayscale",
-];
 ---
 
-<section class="py-20 overflow-hidden relative" id="reglamento">
+<section class="py-20 overflow-hidden relative text-on-background" id="mision">
   <div class="max-w-7xl mx-auto px-8">
     <div class="flex flex-col md:flex-row gap-12 items-center">
       <div class="md:w-1/3">
         <h3
-          class="text-5xl font-headline font-bold text-secondary mb-6 tracking-tight"
+          class="text-5xl font-headline font-bold text-secondary-fixed mb-6 tracking-tight"
         >
           {title}
         </h3>
-        <p class="text-on-surface-variant mb-8">{intro}</p>
+        <p class="text-on-background/90 mb-8">{intro}</p>
         <ul class="space-y-4">
           {
-            rules.map((rule) => (
-              <li class="flex items-center gap-3 text-primary font-medium">
+            items.map((item) => (
+              <li class="flex items-center gap-3 text-on-background font-medium">
                 <MaterialIcon name="check_circle" class="text-tertiary" />
-                {rule}
+                {item}
               </li>
             ))
           }
@@ -55,7 +49,7 @@ const imgClasses = [
             <div class={imageStyles[i] ?? imageStyles[0]}>
               <img
                 alt={img.alt}
-                class={imgClasses[i] ?? imgClasses[0]}
+                class="w-full h-full object-cover"
                 src={img.url}
               />
             </div>

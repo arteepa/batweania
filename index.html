@@ -20,55 +20,62 @@
 				theme: {
 					extend: {
 						colors: {
-							"on-tertiary-container": "#ffe6be",
-							"surface-tint": "#685d4c",
-							"tertiary-fixed": "#ffdea5",
-							tertiary: "#684c0b",
-							"surface-variant": "#ece2ca",
-							"primary-fixed": "#f0e0cb",
-							"surface-container": "#f7edd5",
-							"on-surface": "#201b0d",
-							primary: "#594f3f",
-							"primary-fixed-dim": "#d3c5b0",
-							"surface-dim": "#e3d9c2",
-							"secondary-fixed": "#e7e6ac",
-							"on-secondary": "#ffffff",
-							"surface-bright": "#fff8ef",
-							"on-primary-container": "#f6e7d1",
-							"surface-container-high": "#f1e7cf",
-							"surface-container-lowest": "#ffffff",
-							"tertiary-container": "#836423",
-							"inverse-surface": "#353020",
+							primary: "#5C4E38",
 							"on-primary": "#ffffff",
-							error: "#ba1a1a",
+							"primary-container": "#73592d",
+							"on-primary-container": "#F4E8D0",
+							"primary-fixed": "#EDE0C8",
+							"primary-fixed-dim": "#D0C0A0",
+							"on-primary-fixed": "#231A0C",
+							"on-primary-fixed-variant": "#4E4230",
+
+							secondary: "#4D6B3D",
+							"on-secondary": "#ffffff",
+							"secondary-container": "#A8D098",
+							"on-secondary-container": "#1C3A12",
+							"secondary-fixed": "#C8E6BD",
+							"secondary-fixed-dim": "#9DC892",
+							"on-secondary-fixed": "#0E200A",
+							"on-secondary-fixed-variant": "#375428",
+
+							tertiary: "#B87620",
 							"on-tertiary": "#ffffff",
-							"outline-variant": "#c9c7b8",
-							"primary-container": "#726755",
-							"surface-container-low": "#fdf3db",
-							secondary: "#616133",
-							"on-secondary-container": "#676738",
-							"tertiary-fixed-dim": "#e9c176",
-							surface: "#fff8ef",
-							"inverse-primary": "#d3c5b0",
-							"secondary-fixed-dim": "#cac992",
-							"on-tertiary-fixed": "#261900",
-							"on-primary-fixed-variant": "#4f4535",
-							"surface-container-highest": "#ece2ca",
-							"secondary-container": "#e7e6ac",
+							"tertiary-container": "#955E18",
+							"on-tertiary-container": "#FFE0B5",
+							"tertiary-fixed": "#FFDDA0",
+							"tertiary-fixed-dim": "#E4B458",
+							"on-tertiary-fixed": "#281800",
+							"on-tertiary-fixed-variant": "#744C0E",
+
+							surface: "#FAF4E8",
+							"surface-bright": "#FAF4E8",
+							"surface-dim": "#DDD7CB",
+							"surface-variant": "#E6DCC8",
+							"surface-tint": "#5C4E38",
+							"surface-container": "#F0E9D8",
+							"surface-container-low": "#F5EEE0",
+							"surface-container-high": "#EAE3D2",
+							"surface-container-lowest": "#FFFFFF",
+							"surface-container-highest": "#E3DCC8",
+
+							"on-surface": "#1E1A10",
+							"on-surface-variant": "#4C4838",
+							"on-background": "#FAF4E8",
+							background: "#73592d",
+
+							outline: "#7C7868",
+							"outline-variant": "#CCC7B5",
+							"inverse-surface": "#34301F",
+							"inverse-on-surface": "#F6F0E4",
+							"inverse-primary": "#D0C0A0",
+
+							error: "#BA1A1A",
 							"on-error": "#ffffff",
-							"on-error-container": "#93000a",
-							"on-background": "#201b0d",
-							"on-primary-fixed": "#221a0d",
-							"inverse-on-surface": "#faf0d8",
-							"on-surface-variant": "#48473c",
-							background: "#fff8ef",
-							outline: "#79776b",
-							"error-container": "#ffdad6",
-							"on-tertiary-fixed-variant": "#5d4201",
-							"on-secondary-fixed": "#1d1d00",
-							"on-secondary-fixed-variant": "#49491e",
+							"error-container": "#FFDAD6",
+							"on-error-container": "#93000A",
+
 							"brand-dark": "#2C2416",
-							"brand-cream": "#F2E8D0",
+							"brand-cream": "#ddcf93",
 						},
 						fontFamily: {
 							headline: ["Newsreader", "serif"],
@@ -104,12 +111,12 @@
 				-webkit-mask-image: radial-gradient(circle, black 50%, transparent 95%);
 			}
 			.woven-pattern {
-				background-image: radial-gradient(#684c0b 0.5px, transparent 0.5px);
+				background-image: radial-gradient(#B87620 0.5px, transparent 0.5px);
 				background-size: 24px 24px;
 				opacity: 0.08;
 			}
 			.mandala-watermark {
-				background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z' fill='none' stroke='%23e9c176' stroke-width='0.5'/%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z' fill='none' stroke='%23E4B458' stroke-width='0.5'/%3E%3C/svg%3E");
 				background-size: 300px 300px;
 			}
 		</style>
@@ -120,46 +127,46 @@
 		</style>
 	</head>
 	<body
-		class="bg-surface font-body text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed"
+		class="bg-background font-body text-on-background selection:bg-tertiary-fixed selection:text-on-tertiary-fixed"
 	>
 		<div class="fixed inset-0 paper-texture z-50"></div>
 		<main>
 			<!-- Hero Section -->
 			<section
-				class="relative flex items-center pb-12 pt-20 overflow-hidden bg-brand-dark text-brand-cream"
+				class="relative flex items-center py-12 overflow-hidden text-brand-cream"
 			>
 				<div
 					class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
 				>
-					<div class="lg:col-span-6">
-                        <div class="mb-4">
-                            <h1
-                                class="text-4xl font-headline font-bold text-white leading-[0.9] mb-2"
-                            >
-                                Parque Natural <br />
-                            </h1>
-                            <span class="text-7xl font-headline font-bold leading-[0.9] tracking-tighter italic text-tertiary-fixed">
-                                Batwe Ania
-                            </span>
-                        </div>
+					<div class="lg:col-span-6 lg:col-start-4">
+						<div class="mb-4 flex justify-center w-full">
+							<img
+								src="public/batweania-logo.png"
+								alt="Batwe Ania Parque Natural"
+								width="1000"
+								height="1000"
+								decoding="async"
+								class="h-auto w-full max-w-[220px] sm:max-w-[260px] object-contain drop-shadow-lg"
+							/>
+						</div>
 						<p
-							class="text-lg md:text-1xl text-brand-cream/80 font-light max-w-lg leading-relaxed"
+							class="text-lg md:text-1xl text-brand-cream text-center leading-relaxed "
 						>
-                            En el pueblo de Los Hornos se encuentra el inicio y final del Río Yaqui.
-                            <br />
-                            <br />
-                            Un lugar lleno de vida que merece ser cuidado.
+						Un proyecto comunitario que busca establecer el primer parque natural de Cajeme.
+						<br /><br />"Batwe Ania" significa "Universo del Río" en lengua Yoeme Yaqui.
 						</p>
-						<div class="flex flex-wrap gap-6 pt-4">
+						<div
+							class="flex flex-col sm:flex-row flex-wrap gap-6 pt-4 justify-center sm:items-center"
+						>
 							<a
-								class="px-10 py-5 bg-brand-cream text-brand-dark rounded-full font-label font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl"
+								class="block w-full sm:w-auto text-center px-10 py-5 bg-brand-cream text-brand-dark rounded-full font-label font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl"
 								href="#ayuda"
-								>Visita el Parque</a
+								>Únete al Voluntariado</a
 							>
 							<a
-								class="px-10 py-5 border border-brand-cream/30 text-brand-cream rounded-full font-label font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all"
+								class="block w-full sm:w-auto text-center px-10 py-5 border border-brand-cream/30 text-brand-cream rounded-full font-label font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all"
 								href="#mision"
-								>Nuestra Misión</a
+								>Conoce Nuestra Misión</a
 							>
 						</div>
 					</div>
@@ -168,82 +175,78 @@
 			<section class="w-full bg-surface-container-high" id="imagen-destacada">
 				<div class="w-full">
 					<img
-						src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+						src="public/batweania-hero.jpg"
 						alt="Paisaje Natural en Batwe Ania"
 						class="w-full h-72 md:h-[500px] object-cover shadow-xl"
 					/>
 				</div>
 			</section>
-			<!-- Mission Section -->
+			<!-- Ubicacion Section -->
 			<section
-				class="py-16 relative bg-surface-container-highest/30"
-				id="mision"
+				class="py-16 relative bg-brand-cream text-on-surface"
+				id="ubicacion"
 			>
 				<div class="max-w-5xl mx-auto px-8 text-center space-y-12">
 					<h2
 						class="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight"
 					>
-						Nuestra Misión
+						¿Por qué aquí?
 					</h2>
-					<div class="grid md:grid-cols-2 gap-16 text-left items-start">
-						<p
-							class="text-lg leading-relaxed text-on-surface-variant font-light italic border-l-2 border-tertiary-fixed-dim pl-8"
-						>
-							"Batwe Ania no es solo un parque; es la manifestación física de
-							nuestra cosmovisión. Aquí, cada árbol de mezquite y cada piedra en
-							el cauce tiene una voz que respetamos y preservamos para las
-							generaciones venideras."
-						</p>
-						<p class="text-lg leading-relaxed text-on-surface">
-							Nuestra misión es la restauración ecológica integral del
-							territorio Yaqui, fusionando el conocimiento botánico tradicional
-							con la conservación científica moderna. Buscamos devolverle al río
-							su flujo natural y a nuestra gente su conexión sagrada con el
-							entorno.
+					<div class="gap-16 items-center">
+						<p class="text-lg leading-relaxed text-on-surface text-center">
+							En el pueblo de Los Hornos, se encuentra el inicio y final del Río Yaqui, y su riqueza natural justifica el proyecto: El último sistema ripario y última selva baja caducifolia que queda del Río Yaqui. Punto clave en el sur de Sonora para anidación de aves y biodiversidad.
 						</p>
 					</div>
 				</div>
 			</section>
-			<!-- Rules & Serpent Motif Transition -->
-			<section class="py-20 overflow-hidden relative"
-            id="reglamento"
-            >
+			<!-- Mision y Vision -->
+			<section
+				class="py-20 overflow-hidden relative text-on-background"
+				id="mision"
+			>
 				<div class="max-w-7xl mx-auto px-8">
 					<div class="flex flex-col md:flex-row gap-12 items-center">
 						<div class="md:w-1/3">
 							<h3
-								class="text-5xl font-headline font-bold text-secondary mb-6 tracking-tight"
+								class="text-5xl font-headline font-bold text-secondary-fixed mb-6 tracking-tight"
 							>
-								Reglamento
+								Misión
 							</h3>
-							<p class="text-on-surface-variant mb-8">
-								El parque es un ser vivo que requiere
-								nuestro cuidado colectivo.
+							<p class="text-on-background/90 mb-8">
+								La riqueza no solo está en la naturaleza sino en las personas y el vínculo colaborativo.
 							</p>
 							<ul class="space-y-4">
-								<li class="flex items-center gap-3 text-primary font-medium">
+								<li class="flex items-center gap-3 text-on-background font-medium">
 									<span
 										class="material-symbols-outlined text-tertiary"
 										data-icon="check_circle"
 										>check_circle</span
 									>
-									Solo huellas, nada de basura.
+									Sensibilizar a nuevas generaciones y reconectar con las raíces.
 								</li>
-								<li class="flex items-center gap-3 text-primary font-medium">
+								<li class="flex items-center gap-3 text-on-background font-medium">
 									<span
 										class="material-symbols-outlined text-tertiary"
 										data-icon="check_circle"
 										>check_circle</span
 									>
-									Silencio en las zonas de anidación.
+									Crear un puente entre la cosmovisión Yoeme Yaqui y los nuevos actores.
 								</li>
-								<li class="flex items-center gap-3 text-primary font-medium">
+								<li class="flex items-center gap-3 text-on-background font-medium">
 									<span
 										class="material-symbols-outlined text-tertiary"
 										data-icon="check_circle"
 										>check_circle</span
 									>
-									Respeto a la flora nativa.
+									Hacer un pueblo más habitable y feliz.
+								</li>
+								<li class="flex items-center gap-3 text-on-background font-medium">
+									<span
+										class="material-symbols-outlined text-tertiary"
+										data-icon="check_circle"
+										>check_circle</span
+									>
+									Que sea sostenible por la misma comunidad.
 								</li>
 							</ul>
 						</div>
@@ -253,9 +256,9 @@
 							>
 								<img
 									alt="Textura de corteza de árbol"
-									class="w-full h-full object-cover grayscale opacity-80"
+									class="w-full h-full object-cover"
 									data-alt="Close up of organic tree bark texture"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU67CDR6WoJQwpADsZtN6E4bpAraQLuEE3EGUE-ljEXvqROSiAl0fIQH6gpBue9uReaTSyiNieLdugBhVU9jeApjm2O_PXWvdGGUqqd1fMWr0TCPzpyOW9LN9TxcCdvYhvT9VqhdEKUpb1JJs-cgc2pBe5YGBH7WqQXDrehMEDDCfb6xug2FUCKw25fMk3BAeZ_wgXwMWLzQwCabNfFC7AYAHbmUM6sDtFdc6vY5FUnQuhnBcyO1bh9Us3nso4RAK9d71rPGBVKqql"
+									src="public/mision/mision-1.jpg"
 								/>
 							</div>
 							<div
@@ -265,7 +268,7 @@
 									alt="Hojas verdes"
 									class="w-full h-full object-cover"
 									data-alt="Green leaves reflecting sunlight"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVM0jb9eYLH_EzihbXBp5pSNvLXv4BdcfvAWUV3yfX4P40-lxmaZvHWabSWW7G6soByRcwBZY2AmO86P_DnL6NCABdMUoUSaUXUdop33WPG-yhrhoEkFJNyddshAeBj67OUKJJJ_F_GqRhnS9zlDA6SsfMvt1Pj_BwLbKW7fMFx9Et653jDF8BxBVy6lXYADsCuXwzO7emj6EEH1tWxfTpk-qjOR8w0jGpX90Ev4q5qe9qd4gukv0hN-dRo63AFSas1573aiC3fwfV"
+									src="public/mision/mision-2.jpg"
 								/>
 							</div>
 							<div
@@ -273,287 +276,208 @@
 							>
 								<img
 									alt="Montañas lejanas"
-									class="w-full h-full object-cover grayscale"
+									class="w-full h-full object-cover "
 									data-alt="Distant mountain peaks at dawn"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7UEhWC-VIVyJHfXkYI-RMiHXVIL5PKW7AXolvGTSFoAP8scnQItq4WXHetizerySIMO5GA-NINvgV6foJw2hhHogJrOuE-hTHmtiaQOEfc7fKiikp7Vx2nD8Pshb7EIAUgOeyL5U6CjSLFNp3Zt9nYpx-d6eF_oSlhFsAtqtni_C3bFvotcWTjXNXMJg40ymOHq4LJxjfBLgubkiU8t-m4V8ovqseOwlIqSJ8c6DhsqfwLpSkgid1gGXAc2HXeCs1y_wncFmdG1XZ"
+									src="public/mision/mision-3.jpg"
 								/>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- Trail Map Section (Bento Style) -->
-			<section class="py-16 bg-brand-cream" id="mapa">
+			<!-- Logros -->
+			<section class="py-16 bg-brand-cream text-on-surface" id="logros">
 				<div class="max-w-7xl mx-auto px-8">
-					<div
-						class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
-					>
-						<div class="max-w-xl">
-							<h2
-								class="text-5xl font-headline font-bold text-primary mb-4 tracking-tight"
-							>
-								Senderos
-							</h2>
-							<p class="text-on-surface-variant text-lg">
-								Un mapa diseñado para guiarte por los puntos más sagrados y
-								biodiversos de nuestra reserva.
-							</p>
-						</div>
-						<div class="flex gap-4">
-							<button
-								class="p-4 bg-surface-container rounded-full text-tertiary hover:bg-tertiary-fixed transition-colors"
-							>
-								<span class="material-symbols-outlined" data-icon="download"
-									>download</span
-								>
-							</button>
-						</div>
+					<div class="max-w-3xl mb-12">
+						<h2
+							class="text-5xl font-headline font-bold text-primary mb-4 tracking-tight"
+						>
+							¿Qué hemos logrado?
+						</h2>
+						<p class="text-on-surface-variant text-lg">
+							Los logros concretos del proyecto hasta ahora:
+						</p>
 					</div>
-					<div
-						class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px] md:h-[600px]"
+					<ul
+						class="grid grid-cols-1 md:grid-cols-2 gap-6 list-none p-0 m-0"
 					>
-						<div
-							class="md:col-span-2 md:row-span-2 bg-surface-variant rounded-full relative overflow-hidden group"
-						>
-							<img
-								alt="Mapa ilustrado del sendero"
-								class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-								data-alt="Stylized landscape map of river trails"
-								data-location="Sonora, Mexico"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaiFrpwrctAJxUVbhmSqxvJps9OKyg1tiFKApmVbE-w-oiDl_1o8PA0-oB40iDYnf2Lou83N6cwSfdXt9Je00Iz3fNirMODSor4RGfB9JFjAVAk_5NcI2OfnTzyKBKN-bIRbM9NSRbuDDCdlAEwYehAs2bbWV9rD_9ETfDPCQEt46n95xuNDs2OxkMM6Nzypcm-dLH1YtH87Ebl2FOeiIjlNQVs87i2Ya4cQRQDyM9PaS1hUk1Ot8ritxs7FYboSpX5rf0JS_ytTx9"
-							/>
-							<div
-								class="absolute inset-0 bg-primary/20 flex flex-col justify-end p-10 text-white"
-							>
-								<h4 class="font-headline text-3xl font-bold">Ruta Ancestral</h4>
-								<p
-									class="font-label text-sm uppercase tracking-widest opacity-80"
-								>
-									12km • Dificultad Media
-								</p>
-							</div>
-						</div>
-						<div
-							class="md:col-span-2 bg-tertiary-container rounded-full p-10 text-on-tertiary-container flex items-center justify-between"
-						>
-							<div class="space-y-2">
-								<h4 class="text-2xl font-headline font-bold">
-									Punto de Observación
-								</h4>
-								<p class="opacity-80">
-									Avistamiento de aves migratorias y flora endémica.
-								</p>
-							</div>
-							<span
-								class="material-symbols-outlined text-6xl opacity-30"
-								data-icon="visibility"
-								>visibility</span
-							>
-						</div>
-						<div
-							class="md:col-span-1 bg-surface-container-high rounded-full p-8 flex flex-col justify-center items-center text-center"
-						>
-							<span class="text-4xl font-headline font-bold text-tertiary mb-1"
-								>8</span
-							>
-							<p
-								class="text-xs font-label uppercase tracking-widest text-primary"
-							>
-								Estaciones
-							</p>
-						</div>
-						<div
-							class="md:col-span-1 bg-secondary rounded-full p-8 flex flex-col justify-center items-center text-center text-white"
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
 						>
 							<span
-								class="material-symbols-outlined text-3xl mb-2"
-								data-icon="explore"
-								>explore</span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
 							>
-							<p class="text-xs font-label uppercase tracking-widest">
-								Guías Locales
-							</p>
-						</div>
-					</div>
+							<span class="text-on-surface leading-relaxed"
+								>Rehabilitación del centro de salud del pueblo.</span
+							>
+						</li>
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
+						>
+							<span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
+							>
+							<span class="text-on-surface leading-relaxed"
+								>Rehabilitación de áreas verdes y reforestación.</span
+							>
+						</li>
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
+						>
+							<span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
+							>
+							<span class="text-on-surface leading-relaxed"
+								>Vivero comunitario.</span
+							>
+						</li>
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
+						>
+							<span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
+							>
+							<span class="text-on-surface leading-relaxed"
+								>Talleres gratuitos (etnobotánica, meditación, avistamiento de
+								aves, danza).</span
+							>
+						</li>
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
+						>
+							<span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
+							>
+							<span class="text-on-surface leading-relaxed"
+								>Eventos culturales.</span
+							>
+						</li>
+						<li
+							class="bg-surface-container-high rounded-full p-8 flex gap-4 items-start border border-outline-variant/10 shadow-sm"
+						>
+							<span
+								class="material-symbols-outlined text-tertiary shrink-0 text-2xl mt-0.5"
+								>check_circle</span
+							>
+							<span class="text-on-surface leading-relaxed"
+								>Murales de biodiversidad y cosmovisión Yaqui en el corredor
+								principal por artistas locales.</span
+							>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<!-- Ways to Help (Woven Layout) -->
 			<section
-				class="py-16 bg-surface-container-low relative overflow-hidden"
+				class="py-16 bg-surface-container-low relative overflow-hidden text-on-surface"
 				id="ayuda"
 			>
 				<div
 					class="absolute top-0 left-0 w-full h-24 mandala-watermark opacity-10"
 				></div>
 				<div class="max-w-7xl mx-auto px-8 relative z-10">
-					<div class="text-center mb-20">
+					<div class="text-center mb-12">
 						<h2
 							class="text-5xl font-headline font-bold text-primary tracking-tight"
 						>
-							¿Cómo aportar?
+							Súmate al Voluntariado
 						</h2>
 						<p class="text-on-surface-variant max-w-2xl mx-auto mt-4">
-							Tu apoyo permite que el ciclo de la vida continúe en Batwe Ania.
+							No se necesita experiencia, solo ganas de hacer algo por la tierra.
 						</p>
 					</div>
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<!-- Volunteering -->
+					<div class="max-w-3xl mx-auto">
 						<div
-							class="bg-surface rounded-full p-12 shadow-xl border border-outline-variant/5 hover:-translate-y-2 transition-transform duration-500"
+							class="bg-surface rounded-[2.5rem] p-10 md:p-12 shadow-xl border border-outline-variant/5"
 						>
-							<div
-								class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-8"
-							>
-								<span
-									class="material-symbols-outlined text-primary text-3xl"
-									data-icon="volunteer_activism"
-									>volunteer_activism</span
-								>
-							</div>
-							<h3 class="text-2xl font-headline font-bold text-primary mb-4">
-								Voluntariado
-							</h3>
-							<p class="text-on-surface-variant mb-8 leading-relaxed">
-								Únete a nuestras jornadas de reforestación y limpieza del cauce
-								del río cada primer sábado del mes.
+							<p class="text-on-surface leading-relaxed mb-6">
+								Estamos creando el primer sendero ecológico del Parque Batwe
+								Ania y necesitamos tus manos para hacerlo realidad.
+							</p>
+							<p class="text-on-surface leading-relaxed mb-8">
+								Nos coordinamos a través de un grupo de WhatsApp donde
+								compartimos las necesidades del proyecto y organizamos las
+								jornadas de trabajo.
 							</p>
 							<a
-								class="text-tertiary font-bold text-sm uppercase tracking-widest hover:underline underline-offset-8"
-								href="#"
-								>Inscríbete →</a
-							>
-						</div>
-						<!-- Merch -->
-						<div
-							class="bg-surface rounded-full p-12 shadow-xl border border-outline-variant/5 hover:-translate-y-2 transition-transform duration-500 md:mt-12"
-						>
-							<div
-								class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-8"
-							>
-								<span
-									class="material-symbols-outlined text-tertiary text-3xl"
-									data-icon="shopping_bag"
-									>shopping_bag</span
-								>
-							</div>
-							<h3 class="text-2xl font-headline font-bold text-primary mb-4">
-								Merch
-							</h3>
-							<p class="text-on-surface-variant mb-8 leading-relaxed">
-								Adquiere productos de Batwe Ania. Las ganancias son invertidas en el parque.
-							</p>
-							<a
-								class="text-tertiary font-bold text-sm uppercase tracking-widest hover:underline underline-offset-8"
-								href="#"
-								>Ver Tienda →</a
-							>
-						</div>
-						<!-- Donations -->
-						<div
-							class="bg-surface rounded-full p-12 shadow-xl border border-outline-variant/5 hover:-translate-y-2 transition-transform duration-500"
-						>
-							<div
-								class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center mb-8"
-							>
-								<span
-									class="material-symbols-outlined text-secondary text-3xl"
-									data-icon="favorite"
-									>favorite</span
-								>
-							</div>
-							<h3 class="text-2xl font-headline font-bold text-primary mb-4">
-								Donaciones
-							</h3>
-							<p class="text-on-surface-variant mb-8 leading-relaxed">
-								Tu contribución económica directa apoya la investigación
-								científica y la protección de fauna nativa.
-							</p>
-							<a
-								class="text-tertiary font-bold text-sm uppercase tracking-widest hover:underline underline-offset-8"
-								href="#"
-								>Donar Ahora →</a
+								class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-on-primary font-bold text-sm uppercase tracking-widest shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface"
+								href="https://chat.whatsapp.com/D60IopcvQqTF8X8RU4KcgU?mode=gi_t"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Únete al grupo de WhatsApp <span aria-hidden="true">→</span></a
 							>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- Gallery Section -->
-			<section class="py-16 bg-surface" id="galeria">
-				<div class="max-w-7xl mx-auto px-8">
-					<h2
-						class="text-5xl font-headline font-bold text-primary mb-16 tracking-tight text-center"
-					>
-						Fotos
-					</h2>
-					<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-						<div class="space-y-4 md:space-y-8">
-							<img
-								alt="Vista del río"
-								class="w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"
-								data-alt="Aerial view of a winding blue river"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSFqr6-E-3M0LNu65xzYQ2ig6kDVyVOfA0NfV0esAIqC2-z4QIAY0Sm1K5i7iyeDDusY1r7dnih5BQLgpiG0QtpF9evTbYZ32TdnKptxaZUcUAG5DQp6P1qjchrxkYmT7QzpNsLXUy6UjuAGyUJrbvgH5VtdwKuChllThtsFgqYQ40pNrXwKOPQAeC_sVA6zVfNfYhyzix_5vmRWemtCN6uKbWGud59wq12ZhB2Ihp3fvKWGbR6i8boyrdWOwife1tYGCXKqFAKhM1"
-							/>
-							<img
-								alt="Cascada oculta"
-								class="w-full aspect-square object-cover rounded-full"
-								data-alt="Small waterfall in a lush green jungle"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuArzUnZcETkmE90qr7k0rdG7RmfsTXnzuNPnA8d-vWSQ1l-kZLEr-7btbKJ_7IxL21nGIPip-iXRY_7ZuFmVD8G7iFZvUp6FqVJr-ikeGnZP0ZSqrbNzdxGvyyvxbLKQZobo_nVzIDgSp5PFeJaU4p-tTshkekdGbp91AfvSSXQbG1gUDfGhgSL_8jeXPXam6YP0QfEA7ORkVMo1oq2Ir1CF5kSQo7picb_HU9iLoQPdaVdH65PmKr8Mm6WDl4Cz1vnn8OuKZvOOywH"
-							/>
-						</div>
-						<div class="space-y-4 md:space-y-8 pt-12">
-							<img
-								alt="Árbol centenario"
-								class="w-full aspect-square object-cover rounded-full"
-								data-alt="Ancient tree with wide canopy and visible roots"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFPKSwlSYPlwuBQLe4SxSmcGDW6jCJULVny5qNSurSrn6aipdSHcrHoJ5XcUAqpnzLqjhoj0KUw6P70ILZucWX3WV16x9JYmpDqBy5SOF4DOxc_uc3yhVwWL0pWZ9zlpis7DYoDRwEeiVLLib3l1_eFYNT3WWJinBhS2ZVpscV-AJ2frNdZDvBHUoaQm9EO_TKnbubfzm3uLxs_itxAbn_gi2Y4LVZfJJa2nHawuSDt12eptVgMRvc67DcLrK9_LS_GBVh_yF8u7nz"
-							/>
-							<img
-								alt="Vida silvestre"
-								class="w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"
-								data-alt="Close-up of a native bird on a branch"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQHl270YJSDUcBf5pvgbkHqdD7cXuch347qxPpCfFMTiuWaxXuV8OQ0ALuPjbgelN3iJxagajyn8qEq5TiXbiWQ7JmLedULXxMFCft2pvklldomWMDWEsQcexgdeN_aM4UBeke7idCCMsZUoUTI-wiHZ13Bbp2bsquKHCSmu78PV5jsNsGDn21ABhVEmI9T4fPfm8O1uxsnwjRxo5ywRM-e7sE8ytOoezvYVmL6qrH8Y8GM2ceTOykBVTFnX27NaTavenf_CKzrTB6"
-							/>
-						</div>
-						<div class="space-y-4 md:space-y-8">
-							<img
-								alt="Refugio natural"
-								class="w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"
-								data-alt="Misty morning in a deep pine forest"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnMKb6_YunBbL3C1ngmtjOQTgOGmm17ELK_HErC3xQ2lLP8KFhIkT5nFLzxktoV9vityktnoRunyAO3wmrL4_sCUkZYhX6QYitgu8pobcCzqbpIpZ6G31JU4I4Tz38TjuWWsX_vh91oH6OzJVID-lBc4hVc6IoBhBHT71VYpn8UZliE5L5tLn6Sx5xxMtwmIHbtTc1pdn7CE5rl3T_VKSiPR0SteY5FzHwYK6Tj9hkIExuWc04fGrlcFJgW7VFIUd50kb8H7m0IrOQ"
-							/>
-							<img
-								alt="Atardecer en el parque"
-								class="w-full aspect-square object-cover rounded-full"
-								data-alt="Sunset glow over a mountain ridge"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYPJp6AnJkP2MBp95fowUXqEMdqW3WN7cwVim-IshvvjesHp83rXYdpThTbwdo0tE8ZImnNkCnivt3I-6d2Tk_ZC3k70jX68uDSq0w_58eC83F0_8qeETHxtQd_iQjWCRHdoyDnj-vGH-iko7DTL6qhaefihh7xW1nRui5tKQGa6JnqmIKhTXjmLHxU7KtxA79L9wjSJXlIDsQX0dd_Z4H3x56byE1pH4kituCGH4KhOQ6zwh2oubH9jfES1whYxw-C2YRfG_uykry"
-							/>
-						</div>
-						<div class="space-y-4 md:space-y-8 pt-12">
-							<img
-								alt="Cañón rocoso"
-								class="w-full aspect-square object-cover rounded-full"
-								data-alt="Stunning view of a rocky desert canyon"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN7OXC7g95-5plFPUYOUjSK_AGgWJhqAp7ZZfTpLUnUQu6Sdb7BrA6lPB38_0V9CX0Zqe5b-0-iv4Gh8kw0QIwDvVtzurnkbJFDSeFIugyxv3lf9nbhjVMgolzrIb6WDA_wMuy2yOsqAI8OE06mQST76Z-NjFlpS3IW1zYAmMxCR6RCyjKqssJoDqJ9KBClk1dzzeORZA7bPu6bGzbUOLXmaSvmBTKtoJ0hxpae6MX-i2PiCsb33pgvHmS0jwglM5uc1y4seUIb5ho"
-							/>
-							<img
-								alt="Detalle botánico"
-								class="w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"
-								data-alt="Macro photo of vibrant wildflowers in the wind"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwg0JQ6UFX0CD6eDKEdPbOppLHNrG_cMSqsjqYb-pAL4qqG_sMNxiG5cmfEkP9wPxb03TzeWLap6_KbjLKYEpMNdCB1rkDYvUdI1ylW_h-lgfIQvT-IraN1eRIyVeSKKoN-TNH4C4pPwfSCypzhjNSZD_gX9LHgnLQol9XKHqTtaM2-PT2WGZ2pTKZe8bsrKDBP3ja416lcJ0w2TBqdkvwk-vPTbdTh5KNjurX9-zvJQKjLsnMDEMnc_2Az2nnuEQEc2BNHjEbWDa"
-							/>
-						</div>
-					</div>
+			<section class="bg-surface text-on-surface" id="galeria">
+				<h2 class="sr-only">Fotos</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3">
+					<img
+						alt="Galería Batwe Ania 1"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/1.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 2"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/2.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 3"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/3.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 4"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/4.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 5"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/5.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 6"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/6.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 7"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/7.jpeg"
+					/>
+					<img
+						alt="Galería Batwe Ania 8"
+						class="block w-full aspect-square object-cover"
+						loading="lazy"
+						src="public/fotos/8.jpeg"
+					/>
 				</div>
 			</section>
 			<!-- Contact Section -->
 			<section
-				class="py-16 bg-surface-container-high relative overflow-hidden"
+				class="py-16 bg-surface-container-high relative overflow-hidden text-on-surface"
 				id="contacto"
 			>
 				<div
-					class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+					class="max-w-7xl mx-auto px-8 flex flex-col items-center text-center"
 				>
-					<div class="space-y-8">
+					<div class="space-y-8 max-w-2xl">
 						<h2
 							class="text-5xl font-headline font-bold text-primary tracking-tight"
 						>
@@ -561,31 +485,20 @@
 						</h2>
 						<p class="text-on-surface-variant text-lg leading-relaxed">
 							¿Deseas organizar una visita escolar, un retiro de investigación o
-							simplemente saber más sobre nuestro trabajo? Escríbenos.
+							simplemente saber más sobre nuestro trabajo? Escríbenos por
+							Instagram.
 						</p>
 						<div class="space-y-6">
-							<div class="flex items-start gap-4">
-								<span
-									class="material-symbols-outlined text-tertiary"
-									data-icon="location_on"
-									>location_on</span
-								>
+							<div class="flex justify-center items-start gap-4">
 								<div>
-									<p class="font-bold text-primary">Ubicación</p>
-									<p class="text-on-surface-variant">
-										Km 45, Carretera al Río Yaqui. Sonora, México.
-									</p>
-								</div>
-							</div>
-							<div class="flex items-start gap-4">
-								<span
-									class="material-symbols-outlined text-tertiary"
-									data-icon="mail"
-									>mail</span
-								>
-								<div>
-									<p class="font-bold text-primary">Correo Electrónico</p>
-									<p class="text-on-surface-variant">contacto@batweania.org</p>
+									<a
+										href="https://www.instagram.com/parque.batweania/"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-on-primary font-bold text-sm uppercase tracking-widest shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface"
+										>Instagram <br />
+										@parque.batweania <span aria-hidden="true">→</span></a
+									>
 								</div>
 							</div>
 						</div>
@@ -599,18 +512,18 @@
 			<div
 				class="flex flex-col items-center gap-4 px-6 text-center max-w-7xl mx-auto"
 			>
-				<div class="flex items-center gap-3">
-					<span
-						class="material-symbols-outlined text-secondary text-4xl"
-						data-icon="flutter_dash"
-						>flutter_dash</span
-					>
-					<span class="font-headline text-2xl italic text-[#616133]"
-						>Batwe Ania</span
-					>
+				<div class="mb-2 flex justify-center w-full">
+					<img
+						src="public/batweania-logo.png"
+						alt="Batwe Ania Parque Natural"
+						width="1000"
+						height="1000"
+						decoding="async"
+						class="h-auto w-full max-w-[220px] sm:max-w-[260px] object-contain drop-shadow-lg"
+					/>
 				</div>
 				<p
-					class="font-label text-sm tracking-wide uppercase text-[#594f3f]"
+					class="font-label text-sm tracking-wide text-primary-fixed-dim"
 				>
                     Website x
 					<a href="https://tiemposmejores.org" class="underline hover:text-tertiary transition-colors" target="_blank" rel="noopener">Tiempos Mejores</a>

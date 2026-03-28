@@ -1,27 +1,21 @@
 ---
 interface Props {
   headline: string;
-  quote: string;
   body: string;
 }
 
-const { headline, quote, body } = Astro.props;
+const { headline, body } = Astro.props;
 ---
 
-<section class="py-16 relative bg-surface-container-highest/30" id="mision">
+<section class="py-16 relative bg-brand-cream text-on-surface" id="ubicacion">
   <div class="max-w-5xl mx-auto px-8 text-center space-y-12">
     <h2
       class="text-4xl md:text-5xl font-headline font-bold text-primary tracking-tight"
     >
       {headline}
     </h2>
-    <div class="grid md:grid-cols-2 gap-16 text-left items-start">
-      <p
-        class="text-lg leading-relaxed text-on-surface-variant font-light italic border-l-2 border-tertiary-fixed-dim pl-8"
-      >
-        &ldquo;{quote}&rdquo;
-      </p>
-      <p class="text-lg leading-relaxed text-on-surface">
+    <div class="gap-16 items-center">
+      <p class="text-lg leading-relaxed text-on-surface text-center">
         {body}
       </p>
     </div>

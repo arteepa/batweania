@@ -1,34 +1,23 @@
 ---
-import MaterialIcon from "./MaterialIcon.astro";
-
-interface Card {
-  icon: string;
+interface Props {
   title: string;
+  intro: string;
   body: string;
   ctaLabel: string;
   ctaHref: string;
 }
 
-interface Props {
-  title: string;
-  intro: string;
-  cards: Card[];
-}
-
-const { title, intro, cards } = Astro.props;
-
-const bgColors = ["bg-primary-fixed", "bg-tertiary-fixed", "bg-secondary-fixed"];
-const textColors = ["text-primary", "text-tertiary", "text-secondary"];
+const { title, intro, body, ctaLabel, ctaHref } = Astro.props;
 ---
 
 <section
-  class="py-16 bg-surface-container-low relative overflow-hidden"
+  class="py-16 bg-surface-container-low relative overflow-hidden text-on-surface"
   id="ayuda"
 >
   <div class="absolute top-0 left-0 w-full h-24 mandala-watermark opacity-10">
   </div>
   <div class="max-w-7xl mx-auto px-8 relative z-10">
-    <div class="text-center mb-20">
+    <div class="text-center mb-12">
       <h2
         class="text-5xl font-headline font-bold text-primary tracking-tight"
       >
@@ -36,41 +25,20 @@ const textColors = ["text-primary", "text-tertiary", "text-secondary"];
       </h2>
       <p class="text-on-surface-variant max-w-2xl mx-auto mt-4">{intro}</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {
-        cards.map((card, i) => (
-          <div
-            class:list={[
-              "bg-surface rounded-full p-12 shadow-xl border border-outline-variant/5 hover:-translate-y-2 transition-transform duration-500",
-              i === 1 && "md:mt-12",
-            ]}
-          >
-            <div
-              class:list={[
-                "w-16 h-16 rounded-full flex items-center justify-center mb-8",
-                bgColors[i] ?? bgColors[0],
-              ]}
-            >
-              <MaterialIcon
-                name={card.icon}
-                class:list={["text-3xl", textColors[i] ?? textColors[0]]}
-              />
-            </div>
-            <h3 class="text-2xl font-headline font-bold text-primary mb-4">
-              {card.title}
-            </h3>
-            <p class="text-on-surface-variant mb-8 leading-relaxed">
-              {card.body}
-            </p>
-            <a
-              class="text-tertiary font-bold text-sm uppercase tracking-widest hover:underline underline-offset-8"
-              href={card.ctaHref}
-            >
-              {card.ctaLabel} →
-            </a>
-          </div>
-        ))
-      }
+    <div class="max-w-3xl mx-auto">
+      <div
+        class="bg-surface rounded-[2.5rem] p-10 md:p-12 shadow-xl border border-outline-variant/5"
+      >
+        <p class="text-on-surface leading-relaxed mb-8" set:html={body} />
+        <a
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-on-primary font-bold text-sm uppercase tracking-widest shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface"
+          href={ctaHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {ctaLabel} <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

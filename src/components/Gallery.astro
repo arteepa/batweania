@@ -10,50 +10,18 @@ interface Props {
 }
 
 const { title, images } = Astro.props;
-
-const columnStyles = [
-  ["w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700",
-   "w-full aspect-square object-cover rounded-full"],
-  ["w-full aspect-square object-cover rounded-full",
-   "w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"],
-  ["w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700",
-   "w-full aspect-square object-cover rounded-full"],
-  ["w-full aspect-square object-cover rounded-full",
-   "w-full aspect-[3/4] object-cover rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-700"],
-];
-
-const columnWrappers = [
-  "space-y-4 md:space-y-8",
-  "space-y-4 md:space-y-8 pt-12",
-  "space-y-4 md:space-y-8",
-  "space-y-4 md:space-y-8 pt-12",
-];
 ---
 
-<section class="py-16 bg-surface" id="galeria">
-  <div class="max-w-7xl mx-auto px-8">
-    <h2
-      class="text-5xl font-headline font-bold text-primary mb-16 tracking-tight text-center"
-    >
-      {title}
-    </h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-      {
-        [0, 1, 2, 3].map((col) => {
-          const colImages = images.slice(col * 2, col * 2 + 2);
-          return (
-            <div class={columnWrappers[col]}>
-              {colImages.map((img, row) => (
-                <img
-                  alt={img.alt}
-                  class={columnStyles[col]?.[row] ?? columnStyles[0]![0]}
-                  src={img.url}
-                />
-              ))}
-            </div>
-          );
-        })
-      }
-    </div>
+<section class="bg-surface text-on-surface" id="galeria">
+  <h2 class="sr-only">{title}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {images.map((img) => (
+      <img
+        alt={img.alt}
+        class="block w-full aspect-square object-cover"
+        loading="lazy"
+        src={img.url}
+      />
+    ))}
   </div>
 </section>
