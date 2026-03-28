@@ -7,3 +7,4 @@ studio/node_modules
 studio/.env
 .DS_Store
 *.local
+.vercel

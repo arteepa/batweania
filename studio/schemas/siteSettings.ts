@@ -83,20 +83,21 @@ export const siteSettings = defineType({
     defineField({
       name: "footerCredit",
       title: "Footer credit",
-      description: "Shown as: prefix + linked label (e.g. Website x + Tiempos Mejores).",
+      description:
+        "Shown as: prefix + linked label (e.g. website donado por + tiemposmejores.org).",
       type: "object",
       fields: [
         defineField({
           name: "prefix",
           title: "Text before link",
           type: "string",
-          initialValue: "Website x",
+          initialValue: "website donado por",
         }),
         defineField({
           name: "linkLabel",
           title: "Link label",
           type: "string",
-          initialValue: "Tiempos Mejores",
+          initialValue: "tiemposmejores.org",
         }),
         defineField({
           name: "linkUrl",
